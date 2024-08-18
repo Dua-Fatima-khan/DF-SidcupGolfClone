@@ -1,0 +1,437 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "montserrat";
+  color: #fff;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+/* scroll bar */
+::-webkit-scrollbar {
+  width: 0.7em;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #95c11e;
+  border-radius: 10px;
+}
+
+/* selection */
+::selection {
+  color: #95c11e;
+  background: white;
+}
+/* cursor */
+.cursor {
+  width: 1.5em;
+  height: 1.5em;
+  background: #95c11e;
+  border-radius: 50%;
+  position: fixed;
+  transition: 0.1s ease;
+  z-index: 99;
+}
+.cursorblur {
+  height: 20em;
+  width: 20em;
+  background: #96c11e4d;
+  filter: blur(60px);
+  border-radius: 50%;
+  position: fixed;
+  transition: 0.1s ease;
+  z-index: 9;
+}
+/* navbar */
+nav {
+  height: 18vh;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2em;
+  padding: 2em 6em;
+  position: fixed;
+  z-index: 99;
+}
+nav img {
+  height: 4em;
+}
+
+nav h4 {
+  font-size: 0.85em;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+}
+
+nav h4:hover {
+  color: #95c11e;
+}
+nav button {
+  text-transform: uppercase;
+  background: black;
+  height: 3em;
+  width: 10em;
+  border: 0.15em solid #9ac22f;
+  border-radius: 2em;
+  font-size: 0.9em;
+  font-weight: 600;
+  transition: 0.5s ease;
+}
+nav button:hover {
+  color: #000000;
+  background: #95c11e;
+}
+video {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+/* main */
+.main {
+  position: relative;
+  background: rgba(0, 0, 0, 0.4);
+}
+/* PAGE 1 */
+.page1 {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.page1 h1 {
+  font-size: 6em;
+  font-weight: 800;
+  position: relative;
+}
+.page1 h1::before {
+  content: "Eat. Drink. Play.";
+  position: absolute;
+  color: #000000;
+  left: -5px;
+  top: -4px;
+  -webkit-text-stroke: 0.02em #9dc530;
+  z-index: -1;
+}
+.page1 h2 {
+  font-size: 1.5em;
+  font-weight: 800;
+  z-index: 10;
+}
+.page1 p {
+  margin: 1.5em 0;
+  font-size: 1.15em;
+  font-weight: 400;
+  width: 50%;
+  text-align: center;
+}
+.page1 .arrow {
+  height: 10rem;
+  width: 10em;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-color: transparent;
+  border: 2px solid #95c11e;
+  border-radius: 50%;
+  position: absolute;
+  left: -2%;
+  bottom: 0%;
+  transition: all ease 0.5s;
+}
+.page1 .arrow i {
+  font-size: 2rem;
+}
+.page1 .arrow:hover {
+ background-color: #95c11e;
+}
+
+/* PAGE 2*/
+.page2 {
+  min-height: 100vh;
+  width: 100%;
+  z-index: 10;
+}
+
+.page2 marquee {
+  white-space: nowrap;
+  position: relative;
+  z-index: 10;
+}
+
+.page2 h4 {
+  display: inline-block;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 7em;
+  font-weight: 900;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px #95c11e;
+  color: #000;
+  margin-right: 0.5em;
+  transition: 0.5s ease;
+}
+h4:hover {
+  color: #95c11e;
+}
+
+/* about us */
+
+.page2-TXT {
+  height: 80vh;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  padding: 1em;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.page2-TXT img {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 0.5em;
+}
+.about-us {
+  width: 60%;
+}
+.about-us h1 {
+  font-size: 2em;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.about-us p {
+  text-align: center;
+  font-size: 1.15em;
+  font-weight: 400;
+  line-height: 2em;
+  margin: 2em 0;
+}
+
+/* Cards container */
+.cards-container {
+  height: 80vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+  z-index: 10;
+}
+
+.card {
+  height: 90%;
+  width: 23%;
+  border-radius: 2em;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  transition: all ease 0.6s;
+}
+
+#card1 {
+  background-image: url(/Assests/card1.jpeg);
+}
+#card2 {
+  background-image: url(/Assests/card2.jpeg);
+}
+#card3 {
+  background-image: url(/Assests/card3.jpeg);
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  background: #95c11e;
+  overflow: hidden;
+  padding: 6em 2em;
+  opacity: 0;
+  transition: all ease 0.6s;
+}
+.overlay h3 {
+  color: #000;
+  font-size: 2em;
+  font-weight: 900;
+}
+.overlay p {
+  color: #000;
+  margin: 2em 0;
+}
+.overlay:hover {
+  opacity: 1;
+}
+
+/* greean div */
+.green {
+  height: 30vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right top, #95c11e, #95c11e, #03e703a4);
+  margin: 4em 0;
+}
+.green img {
+  height: 100%;
+  width: 10%;
+  object-fit: cover;
+}
+.green h3 {
+  text-align: center;
+  color: #000;
+  font-size: 1.5em;
+  font-weight: 900;
+  line-height: 2em;
+  margin: 2em 0;
+  width: 50%;
+  text-transform: uppercase;
+}
+
+/* page 3 */
+.page3 {
+  position: relative;
+  height: 80vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 700;
+  padding: 20px;
+  color: white;
+}
+.page3 > p {
+  width: 60%;
+  margin: 10em;
+}
+.page3 img {
+  height: 3em;
+  position: absolute;
+}
+.page3 #colon1 {
+  top: 15%;
+  left: 10%;
+}
+.page3 #colon2 {
+  bottom: 15%;
+  right: 10%;
+}
+
+/* page 4 */
+.page4 {
+  height: 30vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  position: relative;
+}
+.boxes {
+  height: 70%;
+  width: 26%;
+  overflow: hidden;
+  border-radius: 20px;
+  position: relative;
+}
+
+.boxes h3 {
+  height: 100%;
+  width: 100%;
+  background-color: #95c11e;
+  display: flex;
+  color: #000;
+  font-weight: 900;
+  align-items: center;
+  justify-content: center;
+  transition: all ease 0.5s;
+  font-size: 2vw;
+  position: absolute;
+  z-index: 10;
+}
+.boxes img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all ease 0.5s;
+  scale: 1.1;
+}
+.boxes:hover h3 {
+  color: #fff;
+  background-color: transparent;
+}
+.boxes:hover img {
+  scale: 1;
+}
+.page4 h1 {
+  text-transform: uppercase;
+  font-size: 4.8em;
+  position: absolute;
+  top: -19%;
+  font-weight: 900;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #000;
+  -webkit-text-stroke: 1px #95c11e;
+}
+
+/* footer */
+footer {
+  height: 40vh;
+  width: 100%;
+  background: linear-gradient(to right top, #95c11e, #95c11e, #03e7038c);
+  position: relative;
+  z-index: 10;
+}
+footer .bg-img {
+  height: 100%;
+  width: 25%;
+  background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/dots-footer.svg);
+}
+footer .footer-TXT {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  display: flex;
+  gap: 8em;
+  text-transform: uppercase;
+}
+footer .footer-TXT > img {
+  height: 6em;
+}
+
+footer .footer-TXT .TXT {
+  width: 20%;
+}
+footer .footer-TXT .TXT h2 {
+  color: #000;
+  font-size: 1.2em;
+  font-weight: 900;
+  white-space: nowrap;
+  transition: 0.5s ease;
+}
+footer .footer-TXT .TXT h2:hover {
+  color: white;
+}
+footer .footer-TXT .TXT p {
+  color: #000;
+  font-weight: 500;
+}
